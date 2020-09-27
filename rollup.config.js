@@ -38,9 +38,13 @@ const CONFIG = {
   sourcemap: false,
   srcDir: join(__dirname, 'projects'),
   umd: {
-    globals: {},
+    globals: {
+      rxjs: 'rxjs',
+      'rxjs/ajax': 'rxjs.ajax',
+      'rxjs/operators': 'rxjs.operators'
+    },
     name: {
-      core: 'MyLibrary'
+      core: 'RxAjax'
     }
   }
 };
@@ -163,7 +167,13 @@ function createConfig(rollupConfig) {
           format: 'es'
         }
       ].filter(Boolean),
-      plugins: getBasePlugins('es2015'),
+      plugins: getBasePlugins('es2015', {
+        tsconfigOverride: {
+          compilerOptions: {
+            target: 'es2020'
+          }
+        }
+      }),
       preserveModules: true
     });
   }
@@ -302,12 +312,8 @@ function createConfig(rollupConfig) {
     const cpPlugin = require('@alorel/rollup-plugin-copy').copyPlugin({
       copy: [
         {
-          from: 'LICENSE',
+          from: ['LICENSE', 'README.md'],
           opts: {glob: {cwd: __dirname}}
-        },
-        {
-          from: 'README.md',
-          opts: {glob: {cwd: projectDir}}
         }
       ],
       defaultOpts: {

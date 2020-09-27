@@ -1,5 +1,31 @@
 {
-  "name": "@alorel/xxxxxxxxxx",
+  "name": "@alorel/rx-ajax",
   "version": "0.0.0",
-  "description": "xxxxxxxxxx"
+  "description": "Utility wrapper for rxjs' ajax function",
+  "dependencies": {
+    "@alorel/commons-array-types": "^1.0.0",
+    "@alorel/commons-obj": "^1.0.2",
+    "tslib": "^2.0.0 || ^1.11.0"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.0.0"
+  },
+  "main": "index.js",
+  "module": "_fesm5/index.js",
+  "esm5": "_fesm5/index.js",
+  "fesm5": "_fesm5/index.js",
+  "es2015": "_fesm2015/index.js",
+  "esm2015": "_fesm2015/index.js",
+  "fesm2015": "_ffesm2015/index.js",
+  "jsdelivr": "_umd/index.min.js",
+  "browser": "_umd/index.js",
+  "repository": "https://github.com/Alorel/rx-ajax.git",
+  "types": "index.d.ts",
+  "typings": "index.d.ts",
+  "author": "Arturas Molcanovas <a.molcanovas@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  }
 }

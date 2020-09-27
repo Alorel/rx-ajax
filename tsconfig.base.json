@@ -12,7 +12,7 @@
     "strictNullChecks": true,
     "jsxFactory": "h",
     "newLine": "lf",
-    "target": "es2020",
+    "target": "es2015",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,

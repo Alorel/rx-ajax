@@ -10,7 +10,9 @@ require:
   - source-map-support/register
 exclude:
   - '**/*.spec.ts'
+  - node_modules/**/*
   - build/**/*
+  - 'projects/**/test-util/**/*'
   - test/**/*
 sourceMap: true
 instrument: true

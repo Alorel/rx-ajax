@@ -6,7 +6,7 @@ exports._buildBaseExternals = Array.from(
     Object.keys(pkgJson.dependencies || {})
       .concat(Object.keys(pkgJson.peerDependencies || {}))
       .filter(p => !p.startsWith('@types/'))
-      .concat(builtinModules)
+      .concat(builtinModules, 'rxjs/ajax', 'rxjs/operators')
   )
 );
 
