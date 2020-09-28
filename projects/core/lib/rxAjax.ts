@@ -56,7 +56,11 @@ type Props = 'delete' | 'get' | 'getJSON' | 'patch' | 'post' | 'put' | 'extend';
 
 /** Create an rxjs.ajax wrapper with the given default options */
 export function rxAjax<BaseT = any>(defaults: RxAjaxOptions = {}): RxAjax<BaseT> {
-  function rxAjaxExecutor<T = BaseT>(urlOrRequest: string | RxAjaxOptions): Observable<RxAjaxResponse<T>> {
+  function rxAjaxExecutor<T = BaseT>(urlOrRequest?: string | RxAjaxOptions): Observable<RxAjaxResponse<T>> {
+    if (!urlOrRequest) {
+      return innerExecutor(defaults);
+    }
+
     const mergeableOptions: RxAjaxOptions = typeof urlOrRequest === 'string' ? {url: urlOrRequest} : urlOrRequest;
 
     return innerExecutor(merge(defaults, mergeableOptions));

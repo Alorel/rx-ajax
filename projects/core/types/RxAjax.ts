@@ -28,5 +28,6 @@ export interface RxAjax<BaseT = any> {
   /** Make a PUT request */
   put<T = BaseT>(url: string, body: any, opts?: RxAjaxBodiedRequestOptions): Observable<RxAjaxResponse<T>>;
 
-  /** Generic request function */<T = BaseT>(urlOrRequest: string | RxAjaxOptions): Observable<RxAjaxResponse<T>>;
+  /** Generic request function */
+  <T = BaseT>(urlOrRequest?: string | RxAjaxOptions): Observable<RxAjaxResponse<T>>;
 }
