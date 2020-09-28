@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Alorel/rx-ajax/compare/1.0.0...1.0.1) (2020-09-28)
+
+
+### Bug Fixes
+
+* Allow RxAjax to be called without any args ([e4a2814](https://github.com/Alorel/rx-ajax/commit/e4a28144572660c07234d9539af47e6387b3d4d6))
+
 # 1.0.0 (2020-09-27)
 
 
