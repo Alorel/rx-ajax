@@ -116,7 +116,7 @@ export declare type RxAjaxBodiedRequestOptions = Omit<RxAjaxRequestOptions, 'bod
 export interface RxAjaxOptions extends Omit<AjaxRequest, 'headers'> {
     headers?: Obj<string>;
     /** Middleware for the response */
-    post?: Arrayish<(<I = any, O extends I = any>(request: UnprocessedResponse<I>) => UnprocessedResponse<O>)>;
+    post?: Arrayish<(<I = any, O extends I = any>(response: UnprocessedResponse<I>) => UnprocessedResponse<O>)>;
     /** Async middleware for the response */
     postAsync?: Arrayish<RxAjaxPostAsyncHook>;
     /** Middleware for the request */
