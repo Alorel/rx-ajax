@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Alorel/rx-ajax/compare/1.0.1...1.0.2) (2020-10-10)
+
+
+### Documentation
+
+* RxAjaxOptions.post now has the correct argument name ([f2f3c2f](https://github.com/Alorel/rx-ajax/commit/f2f3c2feaccaa5d66f901884501e99678d076d16))
+
 ## [1.0.1](https://github.com/Alorel/rx-ajax/compare/1.0.0...1.0.1) (2020-09-28)
 
 

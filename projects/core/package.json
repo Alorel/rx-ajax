@@ -1,6 +1,6 @@
 {
   "name": "@alorel/rx-ajax",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility wrapper for rxjs' ajax function",
   "dependencies": {
     "@alorel/commons-array-types": "^1.0.0",
